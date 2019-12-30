@@ -13,7 +13,7 @@ export default function IssueItem({ issue, index }) {
 				) : (
 					<input type="checkbox" style={{ marginRight: 5 }} onChange={() => dispatch(toggleIssue(issue.id))} />
 				)}
-				{issue.title} {issue.tags.join(', ')}
+				{issue.title} <span style={tagStyle}>{issue.tags.join(', ')}</span>
 				<button style={btnStyle} onClick={() => dispatch(deleteIssue(issue.id))}>
 					X
 				</button>
@@ -28,6 +28,13 @@ const issueStyle = {
 	padding: '10px',
 	border: '1px #8b9ad3 solid',
 	color: '#fff',
+	fontSize: 'x-large'
+};
+
+const tagStyle = {
+	background: '#0f0f41',
+	color: '#fff',
+	padding: '7px',
 	fontSize: 'large'
 };
 
