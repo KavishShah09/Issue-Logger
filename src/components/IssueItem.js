@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleIssue, deleteIssue } from '../actions';
+import { Link } from 'react-router-dom';
 
 export default function IssueItem({ issue, index }) {
 	const dispatch = useDispatch();
@@ -13,7 +14,10 @@ export default function IssueItem({ issue, index }) {
 				) : (
 					<input type="checkbox" style={{ marginRight: 5 }} onChange={() => dispatch(toggleIssue(issue.id))} />
 				)}
-				{issue.title} <span style={tagStyle}>{issue.tags.join(', ')}</span>
+				<Link to={`/${issue.id}`} style={issueLinkStyle}>
+					{issue.title}
+				</Link>
+				<span style={tagStyle}>{issue.tags.join(', ')}</span>
 				<button style={btnStyle} onClick={() => dispatch(deleteIssue(issue.id))}>
 					X
 				</button>
@@ -29,6 +33,11 @@ const issueStyle = {
 	border: '1px #8b9ad3 solid',
 	color: '#fff',
 	fontSize: 'x-large'
+};
+
+const issueLinkStyle = {
+	color: 'white',
+	textDecoration: 'none'
 };
 
 const tagStyle = {

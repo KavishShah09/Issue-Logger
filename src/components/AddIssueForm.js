@@ -9,6 +9,7 @@ export default function AddIssueForm() {
 		detail: '',
 		tags: []
 	});
+	let nextIssueId = 3;
 	const dispatch = useDispatch();
 
 	const onChange = e => {
@@ -21,6 +22,7 @@ export default function AddIssueForm() {
 		if (issue.title !== '' || issue.description !== '') {
 			dispatch(
 				addIssue({
+					id: nextIssueId++,
 					title: issue.title,
 					description: issue.description,
 					detail: issue.detail,

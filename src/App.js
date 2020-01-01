@@ -1,18 +1,31 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header';
 import Issues from './components/Issues';
 import AddIssueForm from './components/AddIssueForm';
+import IssueDetail from './components/IssueDetail';
+import About from './components/About';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
 	return (
-		<div className="App">
-			<header className="App-header">
-				<h1>Issues Page</h1>
-			</header>
-			<AddIssueForm />
-			<Issues />
-			{/* <p className="App-info">Click on any issue to see details</p> */}
-		</div>
+		<Router>
+			<div className="App">
+				<Header />
+				<Route
+					exact
+					path="/"
+					render={props => (
+						<React.Fragment>
+							<AddIssueForm />
+							<Issues />
+						</React.Fragment>
+					)}
+				/>
+				<Route path="/:id" component={IssueDetail} />
+				<Route path="/about" component={About} />
+			</div>
+		</Router>
 	);
 }
 

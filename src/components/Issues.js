@@ -9,6 +9,7 @@ export default function Issue() {
 			{issueList.map((issue, index) => (
 				<IssueItem key={index} issue={issue} />
 			))}
+			<p className="App-info">Click on any issue to see details</p>
 		</div>
 	);
 }

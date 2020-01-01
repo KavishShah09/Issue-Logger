@@ -1,6 +1,7 @@
 export const addIssue = payload => ({
 	type: 'ADD_ISSUE',
 	payload: {
+		id: payload.id,
 		title: payload.title,
 		description: payload.description,
 		detail: payload.detail,
