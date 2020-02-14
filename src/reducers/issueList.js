@@ -16,15 +16,6 @@ const initialState = [
 			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, at cupiditate repudiandae cum alias eligendi        hic saepe, quis ex explicabo officiis beatae sapiente expedita facere dicta temporibus distinctio et possimus.',
 		tags: ['urgent', 'bug', 'important'],
 		isResolved: true
-	},
-	{
-		id: 2,
-		title: 'lorem ipsum',
-		description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
-		detail:
-			'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, at cupiditate repudiandae cum alias eligendi        hic saepe, quis ex explicabo officiis beatae sapiente expedita facere dicta temporibus distinctio et possimus.',
-		tags: ['urgent'],
-		isResolved: false
 	}
 ];
 

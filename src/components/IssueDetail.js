@@ -1,13 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import { useDispatch } from 'react-redux';
 
 export default function IssueDetail({ match }) {
 	const issueList = useSelector(state => state.issueList);
 	const issueArr = issueList.filter(issue => issue.id == match.params.id);
 	const issue = issueArr[0];
-
-	// const dispatch = useDispatch();
 
 	return (
 		<div style={issueStyle}>

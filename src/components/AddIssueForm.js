@@ -18,7 +18,6 @@ export default function AddIssueForm() {
 
 	const onSubmit = e => {
 		e.preventDefault();
-		console.log(issue.tags);
 		if (issue.title !== '' || issue.description !== '') {
 			dispatch(
 				addIssue({

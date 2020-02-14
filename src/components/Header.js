@@ -5,7 +5,7 @@ export default function Header() {
 	return (
 		<header className="App-header">
 			<Link to="/" style={{ color: 'white' }}>
-				<h1>Issues Page</h1>
+				<h1>Issues App</h1>
 			</Link>
 		</header>
 	);
