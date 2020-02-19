@@ -1,6 +1,6 @@
 # Simple App to register and log Issues
 
-> The is project was made in the process of learning Redux.
+> The project was made in the process of learning Redux.
 
 ## Quick Start
 
