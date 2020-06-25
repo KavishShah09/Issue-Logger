@@ -7,6 +7,8 @@
 ```bash
 # Clone the repository
 git clone https://github.com/KavishShah09/Issue-Logger.git
+
+npm i #To install all dependencies
 ```
 
 ## Available Scripts
